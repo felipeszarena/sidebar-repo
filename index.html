@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reading OS — Sidebar Study Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Sidebar.io · Reading OS</p>
+          <h1>24k curated links. Your pace, your track.</h1>
+          <p class="lede">Set your role and seniority to rank the queue. Study product at the depth your moment requires.</p>
+        </div>
+        <div class="hero-metrics" aria-label="Plan summary">
+          <div>
+            <span id="totalLinks">—</span>
+            <small>links indexed</small>
+          </div>
+          <div>
+            <span id="totalDays">—</span>
+            <small>days at current pace</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="Reading preferences">
+        <label>
+          <span>Links / day</span>
+          <input id="linksPerDay" type="number" min="1" max="60" value="12">
+        </label>
+        <label>
+          <span>Career</span>
+          <select id="careerPath">
+            <option value="pm">Product Manager</option>
+            <option value="founder">Founder</option>
+            <option value="consultant">Product Consultant</option>
+            <option value="designer">UX / Product Designer</option>
+            <option value="tech">Technical PM</option>
+          </select>
+        </label>
+        <label>
+          <span>Seniority</span>
+          <select id="seniority">
+            <option value="junior">Junior</option>
+            <option value="mid">Mid-level</option>
+            <option value="senior">Senior</option>
+            <option value="lead">Lead / Head</option>
+          </select>
+        </label>
+        <label>
+          <span>Reminder</span>
+          <select id="cadence">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+            <option value="off">Off</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="grid">
+        <article class="panel plan-panel">
+          <div class="panel-head">
+            <p class="eyebrow">Suggested plan</p>
+            <button id="shuffleDay" class="icon-button" title="Next batch">↻</button>
+          </div>
+          <h2 id="planTitle">Loading plan...</h2>
+          <p id="planNarrative"></p>
+          <div class="track-list" id="trackList"></div>
+        </article>
+
+        <article class="panel today-panel">
+          <div class="panel-head">
+            <p class="eyebrow">Today's reading</p>
+            <button id="markAllRead" class="text-button">Mark all read</button>
+          </div>
+          <div class="progress-ring" aria-label="Progress">
+            <strong id="readToday">0/12</strong>
+            <span>completed</span>
+          </div>
+          <div id="todayList" class="link-list"></div>
+        </article>
+
+        <article class="panel stats-panel">
+          <p class="eyebrow">Distribution</p>
+          <div id="statsGrid" class="stats-grid"></div>
+        </article>
+
+        <article class="panel notification-panel">
+          <p class="eyebrow">Reading ritual</p>
+          <h2 id="notificationTitle">Daily reminder at 09:00</h2>
+          <p id="notificationCopy"></p>
+          <div class="notification-actions">
+            <input id="reminderTime" type="time" value="09:00">
+            <button id="enableNotifications" class="primary-button">Enable notifications</button>
+          </div>
+          <p class="small-note" id="notificationStatus"></p>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
