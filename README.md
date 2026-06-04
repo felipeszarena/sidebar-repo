@@ -33,7 +33,7 @@ No backend. No login. Runs entirely in the browser.
 ## Getting started
 
 ```bash
-git clone https://github.com/your-username/reading-os
+git clone https://github.com/felipeszarena/sidebar-repo
 cd reading-os
 npm install
 npm run dev
