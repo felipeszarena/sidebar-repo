@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
-const output = path.join(root, "sidebar_reading_queue.csv");
+const output = path.join(root, "public", "sidebar_reading_queue.csv");
 const endpoint = "https://sidebar.io/graphql";
 const query = `query posts($input: MultiPostInput){
   posts(input:$input){
