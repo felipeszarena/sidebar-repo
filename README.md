@@ -57,6 +57,14 @@ Schedule it as a daily cron or wire it to a backend endpoint — see [admin-sync
 
 ---
 
+## Design Knowledge (MCP + skill)
+
+The same Sidebar archive also powers an MCP server and a Claude skill for design analysis grounded in real sources: search by area (leadership, operations, management, design, product, AI) and seniority, list what's new, and read articles live with attribution. A GitHub Action keeps the index in sync daily.
+
+See [knowledge/README.md](knowledge/README.md).
+
+---
+
 ## Adding content sources
 
 Sidebar.io is the default source, but the pipeline accepts any feed. See [content-sources.md](content-sources.md) for:
